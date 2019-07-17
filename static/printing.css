@@ -1,0 +1,24 @@
+body {
+	background-color: #363738;
+}
+
+.center-container {
+	padding-top: 2vh;
+}
+
+.horses {
+	color: #565658;
+	font-weight: bold;
+	font-size: 40px;
+	padding-left: 10vw;
+	text-align: center;
+	padding-bottom: 1vh;
+}
+
+.explanation {
+	color: #b9b9bc;
+	font-weight: bold;
+	font-size: 20px;
+	text-align: center;
+	padding-top: 2vh;
+}

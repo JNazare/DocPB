@@ -1,0 +1,38 @@
+body {
+	background-color: #363738;
+}
+
+.center-container {
+	padding-top: 5vh;
+	text-align: center;
+}
+
+.prompt {
+	color: #b9b9bc;
+	font-weight: bold;
+	font-size: 30px;
+	text-align: center;
+	padding-bottom: 1vh;
+}
+
+.countdown {
+	position: absolute;
+	top: 30vh;
+	left: 45vw;
+	color: #b9b9bc;
+	font-size: 200px;
+	font-weight: bold;
+}
+
+#camera video {
+	width: 900px;
+	height: 675px;
+	margin: 15px;
+	float: left;
+}
+#camera canvas {
+	width: 900px;
+	height: 675px;
+	margin: 15px;
+	float: left;
+}

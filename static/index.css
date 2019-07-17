@@ -1,0 +1,35 @@
+body {
+	background-color: #363738;
+}
+
+.center-container {
+	padding-top: 15vh;
+}
+
+.topline {
+	color: #565658;
+	font-weight: bold;
+	font-size: 40px;
+	padding-left: 10vw;
+}
+
+.midline {
+	color: #676769;
+	font-weight: bold;
+	font-size: 60px;
+	padding-left: 15vw;
+}
+
+.directions {
+	text-align: center;
+	padding-top: 20vh;
+}
+
+.btn-light {
+	background-color: #b9b9bc;
+	color: #363738;
+	font-weight: bold;
+	font-size: 25px;
+	border: 0px;
+	border-radius: 0px;
+}
