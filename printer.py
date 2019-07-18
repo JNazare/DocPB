@@ -59,7 +59,7 @@ def assemblePrint(image_filepaths):
 	cropPrint.save(filename)
 	return filename
 
-def sendToPrinter():
+def sendToPrinter(collage_path):
 	conn = cups.Connection()
 	printers = conn.getPrinters()
 
@@ -69,7 +69,7 @@ def sendToPrinter():
 			printer_name = name
 
 	if printer_name:
-		conn.printFile(printer_name, collage_file,"PhotoBooth",{"copies": str(1)})
+		conn.printFile(printer_name, collage_path, "PhotoBooth",{"copies": str(1)})
 		print("Printing photo...")
 
 	else:

@@ -44,8 +44,9 @@ def capture_photo(counter):
 
 @app.route("/printing", methods=['GET'])
 def printing():
-	# printer.sendToPrinter()
-	return render_template("printing.html", collage_path=request.args.get('collage_path'))
+	collage_path = request.args.get('collage_path')
+	printer.sendToPrinter(collage_path)
+	return render_template("printing.html", collage_path=collage_path)
 
 if __name__ == '__main__':
 	app.run(debug=True)
