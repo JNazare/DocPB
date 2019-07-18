@@ -9,6 +9,7 @@ dropbox==9.4.0
 Flask==1.1.1
 google-auth==1.6.3
 greenlet==0.4.15
+gunicorn==19.9.0
 httplib2==0.13.0
 idna==2.8
 image==1.5.27
