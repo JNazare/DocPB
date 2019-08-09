@@ -1,5 +1,9 @@
 body {
 	background-color: #363738;
+	background-image: url("sa_background.jpg");
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
 }
 
 .center-container {
@@ -7,7 +11,7 @@ body {
 }
 
 .horses {
-	color: #565658;
+	color: #ffffff;
 	font-weight: bold;
 	font-size: 40px;
 	padding-left: 10vw;
@@ -16,7 +20,7 @@ body {
 }
 
 .explanation {
-	color: #b9b9bc;
+	color: #ffffff;
 	font-weight: bold;
 	font-size: 20px;
 	text-align: center;

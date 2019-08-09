@@ -11,7 +11,7 @@ app = Flask(__name__)
 
 NUM_IMAGES = 4
 IMAGE_FILES = ["temp/1.png", "temp/2.png", "temp/3.png", "temp/4.png"]
-PROMPTS = ["prompt1", "prompt2", "prompt3", "prompt4"]
+PROMPTS = ["First, a smiling photo", "Now, a serious one", "Next, a silly one", "Last, a crazy one"]
 dbx = dropbox.Dropbox(os.environ['DROPBOX_API_KEY'])
 
 def upload_photo_to_dropox(collage_path):
@@ -45,7 +45,7 @@ def capture_photo(counter):
 @app.route("/printing", methods=['GET'])
 def printing():
 	collage_path = request.args.get('collage_path')
-	printer.sendToPrinter(collage_path)
+	# printer.sendToPrinter(collage_path)
 	return render_template("printing.html", collage_path=collage_path)
 
 if __name__ == '__main__':
