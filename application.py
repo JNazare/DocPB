@@ -4,15 +4,17 @@ from datetime import date
 
 import pickle
 import dropbox
-
+import random
 import printer
 
 app = Flask(__name__)
 
 NUM_IMAGES = 4
 IMAGE_FILES = ["temp/1.png", "temp/2.png", "temp/3.png", "temp/4.png"]
-PROMPTS = ["First, a smiling photo...", "Now, a serious one...", "Next, a silly one...", "Last, a crazy one!"]
+ALL_PROMPTS = ["a smiling photo", "a serious one", "a silly one", "a crazy one","a playful one","a 'Sam-and-Anneli' one","a pouty one","a ridiculous one","a stylish one","a howling one"]
 dbx = dropbox.Dropbox(os.environ['DROPBOX_API_KEY'])
+
+
 
 def upload_photo_to_dropox(collage_path):
 	with open(collage_path, 'rb') as f:
@@ -23,6 +25,13 @@ def upload_photo_to_dropox(collage_path):
 
 @app.route("/", methods=['GET', 'POST'])
 def index():
+	global PROMPTS
+	PROMPTS = random.sample(ALL_PROMPTS,4)
+	PROMPTS[0] = 'First, '+PROMPTS[0]+'...'
+	PROMPTS[1] = 'Next, '+PROMPTS[1]+'...'
+	PROMPTS[2] = 'Now, '+PROMPTS[2]+'...'
+	PROMPTS[3] = 'Last, '+PROMPTS[3]+'!'
+
 	if request.method == 'POST':
 		return url_for('capture_photo', counter=1)
 	return render_template("index.html")

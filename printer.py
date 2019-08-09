@@ -36,18 +36,18 @@ def assemblePrint(image_filepaths):
 		images[i].thumbnail((iwidth,iheight))
 
 	forPrint = Image.new("RGB", (pwidth, pheight), "white")
-	forPrint.paste(images[0],(offset+20,10))
-	forPrint.paste(images[1],(offset+20,30+iheight))
-	forPrint.paste(images[2],(offset+40+iwidth,10))
-	forPrint.paste(images[3],(offset+40+iwidth,30+iheight))
+	forPrint.paste(images[0],(offset+20,35))
+	forPrint.paste(images[1],(offset+20,55+iheight))
+	forPrint.paste(images[2],(offset+40+iwidth,35))
+	forPrint.paste(images[3],(offset+40+iwidth,55+iheight))
 	
 	title = Image.open('border.jpg')
 	title.thumbnail((1000,1000))
 	forPrint.paste(title,(offset+50+iwidth*2,10)) 
 
-	font = ImageFont.truetype('assets/Verdana.ttf', 35)
-	draw = ImageDraw.Draw(forPrint)
-	draw.text((offset+20, 930),caption % (date.today().strftime("%m/%d/%Y")),font=font, fill="#000000" )
+	# font = ImageFont.truetype('assets/Verdana.ttf', 35)
+	# draw = ImageDraw.Draw(forPrint)
+	# draw.text((offset+20, 930),caption % (date.today().strftime("%m/%d/%Y")),font=font, fill="#000000" )
 
 	fheight=int(pheight+extra)
 	fwidth=int(fheight*1.5)
