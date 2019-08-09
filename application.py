@@ -9,9 +9,9 @@ import printer
 
 app = Flask(__name__)
 
-NUM_IMAGES = 4
+NUM_IMAGES = 1
 IMAGE_FILES = ["temp/1.png", "temp/2.png", "temp/3.png", "temp/4.png"]
-PROMPTS = ["First, a smiling photo", "Now, a serious one", "Next, a silly one", "Last, a crazy one"]
+PROMPTS = ["First, a smiling photo...", "Now, a serious one...", "Next, a silly one...", "Last, a crazy one!"]
 dbx = dropbox.Dropbox(os.environ['DROPBOX_API_KEY'])
 
 def upload_photo_to_dropox(collage_path):
